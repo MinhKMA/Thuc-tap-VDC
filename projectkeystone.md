@@ -183,8 +183,9 @@ lấy thông tin về người sử dụng.</li>
  <li>Hầu hết các thiết lập phức tạp của Identity sources.</li>
  </ul>
  
- **Các Phần đã và đang tìm hiểu : **
- 
- https://github.com/datkk06/Thuc-tap-VDC/blob/master/Keystone-domain.md
- https://github.com/datkk06/Thuc-tap-VDC/blob/master/Keystone-Identityservice-and-config-keystone-mitaka.md
- https://github.com/datkk06/Thuc-tap-VDC/blob/master/performance-liberty-and-mitaka.md
+ **Các Phần đã và đang tìm hiểu :**
+  <ul>
+  <li>https://github.com/datkk06/Thuc-tap-VDC/blob/master/Keystone-domain.md</li>
+  <li>https://github.com/datkk06/Thuc-tap-VDC/blob/master/Keystone-Identityservice-and-config-keystone-mitaka.md</li>
+  <li>https://github.com/datkk06/Thuc-tap-VDC/blob/master/performance-liberty-and-mitaka.md</li>
+  </ul>
