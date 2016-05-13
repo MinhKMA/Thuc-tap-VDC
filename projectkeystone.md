@@ -4,9 +4,10 @@
 ##Mục lục
 
 [I. Vai trò của Project Keystone.] (#vaitro)
+
 [II. Các thành phần trong Keystone] (#cacthanhphan)
  <ul>
- <li>[Keystone enpoint]</li> (#enpoint)
+ <li>[Keystone enpoint] (#enpoint) </li>
  <li>[Keystone backend]</li> (#backend)
  </ul>
 [III. Các phương pháp xác thực trong Keystone.] (#method)
