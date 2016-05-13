@@ -32,6 +32,7 @@
 
 - Trong đó : 
  <ul>
+ <li>Identity : các dịch vụ cung cấp xác thực xác nhận chứng chỉ và dữ liệu về người sử dụng, các tenant và role, cũng như bất kì matadata nào liên quan.</li>
  <li>Token : Xác nhận dịch vụ token và quản lý sử dụng cho các Token. Thẩm định yêu cầu một khi thông tin user/tenant đã được xác minh.</li>
  <li>RBAC : Role-Based-Access-Control (RBAC) là một cơ chế chính sách kiểm soát truy cập trung gian xác định xung quanh vai trò và đặc quyền.  Các thành phần của RBAC như vai trò-quyền, sử dụng vai trò và mối quan hệ vai trò làm cho nó đơn giản để làm nhiệm vụ người dùng. Một nghiên cứu ở NIST đã chứng minh rằng RBAC giải quyết được nhiều nhu cầu của tổ chức thương mại và chính phủ. RBAC có thể được sử dụng để tạo điều kiện quản lý về an ninh trong các tổ chức lớn với hàng trăm người và hàng ngàn quyền. Mặc dù RBAC là khác nhau từ các khuôn khổ kiểm soát truy cập MAC và DAC, nó có thể thực thi các chính sách mà không cần bất kỳ biến chứng. phổ biến của nó là hiển nhiên từ thực tế rằng nhiều sản phẩm và doanh nghiệp đang sử dụng nó trực tiếp hoặc gián tiếp.</li>
  <li>catalog service : dịch vụ catalog cung cấp một enpoint registry sử dụng cho các enpoint discovery.</li>
