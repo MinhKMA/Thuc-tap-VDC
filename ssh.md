@@ -12,7 +12,7 @@
  <li>[1. Tính bí mật.] (#bimat)</li>
  <li>[2. Tính toàn vẹn.] (#toanven)</li>
  <li>[3. Chứng minh xác thực.] (#xacthuc)</li>
- <li>[4. Giấy phép.] (#giayphep)</li>
+ <li>[4. Ủy quyền.] (#giayphep)</li>
  <li>[5. Chuyển tiếp.] (#chuyentiep)</li>
  </ul>
 [III. SSH Architecture.] (#architecture)
