@@ -8,13 +8,13 @@
 [II. Các thành phần trong Keystone] (#cacthanhphan)
  <ul>
  <li>[Keystone enpoint] (#enpoint) </li>
- <li>[Keystone backend]</li> (#backend)
+ <li>[Keystone backend] (#backend) </li>
  </ul>
 [III. Các phương pháp xác thực trong Keystone.] (#method)
  <ul>
- <li>[1. Xác thực bằng password.]</li> (#password)
- <li>[2. Xác thực bằng Token.]</li> (#token)
- <li>[3. Xác thực tập chung (Identity Provider).]</li> (#provider)
+ <li>[1. Xác thực bằng password.] (#password) </li>
+ <li>[2. Xác thực bằng Token.] (#token) </li>
+ <li>[3. Xác thực tập chung (Identity Provider).] (#provider) </li>
  </ul>
 
 ****
