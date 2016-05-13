@@ -1,7 +1,24 @@
 #Báo cáo tìm hiểu về các Project trong Keystone.
 
+****
+##Mục lục
 
+[I. Vai trò của Project Keystone.] (#vaitro)
+[II. Các thành phần trong Keystone] (#cacthanhphan)
+ <ul>
+ <li>[Keystone enpoint]</li> (#enpoint)
+ <li>[Keystone backend]</li> (#backend)
+ </ul>
+[III. Các phương pháp xác thực trong Keystone.] (#method)
+ <ul>
+ <li>[1. Xác thực bằng password.]</li> (#password)
+ <li>[2. Xác thực bằng Token.]</li> (#token)
+ <li>[3. Xác thực tập chung (Identity Provider).]</li> (#provider)
+ </ul>
 
+****
+
+<a name="vaitro"></a>
 ##I. Vai trò của project Keystone.
 
 - Keystone có những vai trò sau đối với OpenStack :
@@ -18,13 +35,14 @@
  <li>RBAC : Role-Based-Access-Control (RBAC) là một cơ chế chính sách kiểm soát truy cập trung gian xác định xung quanh vai trò và đặc quyền.  Các thành phần của RBAC như vai trò-quyền, sử dụng vai trò và mối quan hệ vai trò làm cho nó đơn giản để làm nhiệm vụ người dùng. Một nghiên cứu ở NIST đã chứng minh rằng RBAC giải quyết được nhiều nhu cầu của tổ chức thương mại và chính phủ. RBAC có thể được sử dụng để tạo điều kiện quản lý về an ninh trong các tổ chức lớn với hàng trăm người và hàng ngàn quyền. Mặc dù RBAC là khác nhau từ các khuôn khổ kiểm soát truy cập MAC và DAC, nó có thể thực thi các chính sách mà không cần bất kỳ biến chứng. phổ biến của nó là hiển nhiên từ thực tế rằng nhiều sản phẩm và doanh nghiệp đang sử dụng nó trực tiếp hoặc gián tiếp.</li>
  <li>catalog service : dịch vụ catalog cung cấp một enpoint registry sử dụng cho các enpoint discovery.</li>
  </ul>
-
+<a name="cacthanhphan"></a>
 ##II. Các thành phần trong Keystone.
 
 **Keystone architecture**
 
 ![scr10](http://i.imgur.com/i0cyZ06.png)
 
+<a name="enpoint"></a>
 - Keystone được tổ chức như một nhóm các dịch vụ nội bộ tiếp xúc trên một hoặc nhiều thiết bị đầu cuối.
 
  <ul>
@@ -34,6 +52,7 @@
   <li>Policy : Các dịch vụ Policy cung cấp một cơ cấu ủy quyền dựa trên các nguyên tắc.</li>
   </ul>
 
+<a name="backend"></a>
 - Mỗi dịch vụ có thể được cấu hình để sử dụng một backend, cho phép Keystone phù hợp với một hay nhiều môi trường  và nhu cầu. Các backend cho mỗi dịch vụ được quy đinh tại file `keystone.conf`
  <ul>
  <li>KVS backend : một giao diện backend đơn giản có nghĩa là để được tiếp tục phụ trợ về bất cứ điều gì bạn có thể tra cứu khóa chính.</li>
@@ -45,7 +64,7 @@ tenants riêng biệt ở các subtrees</li>
  </ul> 
 
 
-
+<a name="method"></a>
 ##III. Các phương pháp xác thực Keystone.
 ###1. Xác thực là gì?
 
@@ -54,13 +73,13 @@ tenants riêng biệt ở các subtrees</li>
 
 ###2. Các hình thức xác thực.
 
-- Bao gồm 2 hình thức:
+- Bao gồm các hình thức:
  <ul>
  <li>Xác thực bằng password.</li>
  <li>Xác thực bằng token.</li>
  <li>Xác thực tập chung (Identity Provider).</li>
  </ul>
-
+<a name="password"></a>
 ####2.1. Xác thực bằng Password.
 
 ![scr4](http://i.imgur.com/BNLN8Ln.png)
@@ -105,7 +124,7 @@ tenants riêng biệt ở các subtrees</li>
 - Phần người sử dụng xác định người dùng đến nên có thông tin tên miền (hoặc tên miền hoặc ID), trừ khi toàn cầu chỉ có duy nhất ID của người dùng được sử dụng trong đó, trường hợp đó là đủ để xác định người sử dụng. Điều này là vì trong một triển khai đa miền có thể có nhiều người sử dụng cùng tên, nên phạm vi thích hợp là cần thiết để xác định người dùng được chứng thực.
 - Phần phạm vi là tùy chọn nhưng thường được sử dụng, vì ko có một phạm vi người sử dụng không thể truy xuất danh mục dịch vụ. Phạm vi được sử dụng để chỉ ra các dự án người sử dụng muốn làm việc lại. Nếu một người dùng không có vai trò trong dự án, yêu cầu sẽ bị từ chối.
 - Tương tự như phần người dùng phần phạm vi phải có đủ thông tin về dự án để tìm thấy nó, vì vậy các miền sở hữu phải được xác định. Như trong trường hợp của người dùng và các nhóm, tên dự án cũng có thể xung đột trên domain. Tuy nhiên phải được đảm bảo là duy nhất nếu được chỉ định, không thông tin tên miền là cần thiết.
-
+<a name="token"></a>
 ####2.2. Token.
 
 ![scr5](http://i.imgur.com/6LpW9Db.png)
@@ -134,7 +153,7 @@ tenants riêng biệt ở các subtrees</li>
 - Một unscoped token là một trong những nơi mà người dùng được xác thực nhưng không phải là cho một Project cụ thể hoặc domain. Đây là loại token hữu ích cho việc truy vấn như là xác định những gì dự án một người dùng có quyền truy cập vào. Một dấu hiệu chỉnh phạm vi được xảy ra khi người dùng được xác thực cho một dự án hay một domain cụ thể.
 - Scoped token có vai trò thông tin liên quan đến Scoped tokens và các loại token được sử dụng bởi OpenStack service để xác định những loại hoạt động được phép.
 ```
-
+<a name="provider"></a>
 ####2.3. Xác thực tập chung (Identity Provider).
 
 - Keystone có khả năng xử lý xác thực thông qua
