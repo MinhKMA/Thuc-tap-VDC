@@ -47,8 +47,8 @@
 <a name="enpoint"></a>
 - Keystone được tổ chức như một nhóm các dịch vụ nội bộ tiếp xúc trên một hoặc nhiều thiết bị đầu cuối.
 
- <ul>
-  <li><Identity : các dịch vụ cung cấp xác thực xác nhận chứng chỉ và dữ liệu về người sử dụng, các tenant và role, cũng như bất kì matadata nào liên quan./li>
+  <ul>
+  <li>Identity : các dịch vụ cung cấp xác thực xác nhận chứng chỉ và dữ liệu về người sử dụng, các tenant và role, cũng như bất kì matadata nào liên quan.</li>
   <li>Token : Xác nhận dịch vụ và quản lý sử dụng cho các Token. Thẩm định yêu cầu một khi thông tin người dùng đã được xác minh.</li>
   <li>Catalog : dịch vụ catalog cung cấp một enpoint registry sử dụng cho các enpoint discovery. </li>
   <li>Policy : Các dịch vụ Policy cung cấp một cơ cấu ủy quyền dựa trên các nguyên tắc.</li>
@@ -68,6 +68,7 @@ tenants riêng biệt ở các subtrees</li>
 
 <a name="method"></a>
 ##III. Các phương pháp xác thực Keystone.
+
 ###1. Xác thực là gì?
 
 - Là quá trình xác minh danh tính người dùng, trong nhiều trường hợp chứng thực ban đầu được thực hiện bởi một đăng nhập với user identity của họ. Trong môi trường OpenStack thô sơ Keystone có khả năng biểu diễn tất cả các bước chứng thực, điều này không được khuyến cáo trong môi trường sản xuất và môi trường doanh nghiệp. ĐỐi với môi trường thực sự nơi mật khẩu cần được bảo vệ và quản lý, Keystone có thể dễ dàng tích hợp với một hệ thống với một dịch vụ xác thực hiện có như là LDAP hay Active Directory.
@@ -82,6 +83,7 @@ tenants riêng biệt ở các subtrees</li>
  <li>Xác thực tập chung (Identity Provider).</li>
  </ul>
 <a name="password"></a>
+
 ####2.1. Xác thực bằng Password.
 
 ![scr4](http://i.imgur.com/BNLN8Ln.png)
@@ -127,6 +129,7 @@ tenants riêng biệt ở các subtrees</li>
 - Phần phạm vi là tùy chọn nhưng thường được sử dụng, vì ko có một phạm vi người sử dụng không thể truy xuất danh mục dịch vụ. Phạm vi được sử dụng để chỉ ra các dự án người sử dụng muốn làm việc lại. Nếu một người dùng không có vai trò trong dự án, yêu cầu sẽ bị từ chối.
 - Tương tự như phần người dùng phần phạm vi phải có đủ thông tin về dự án để tìm thấy nó, vì vậy các miền sở hữu phải được xác định. Như trong trường hợp của người dùng và các nhóm, tên dự án cũng có thể xung đột trên domain. Tuy nhiên phải được đảm bảo là duy nhất nếu được chỉ định, không thông tin tên miền là cần thiết.
 <a name="token"></a>
+
 ####2.2. Token.
 
 ![scr5](http://i.imgur.com/6LpW9Db.png)
@@ -156,6 +159,7 @@ tenants riêng biệt ở các subtrees</li>
 - Scoped token có vai trò thông tin liên quan đến Scoped tokens và các loại token được sử dụng bởi OpenStack service để xác định những loại hoạt động được phép.
 ```
 <a name="provider"></a>
+
 ####2.3. Xác thực tập chung (Identity Provider).
 
 - Keystone có khả năng xử lý xác thực thông qua
