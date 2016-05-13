@@ -16,6 +16,7 @@
  <li>[5. Chuyển tiếp.] (#chuyentiep)</li>
  </ul>
 [III. SSH Architecture.] (#architecture)
+
 [IV. Giao thức chứng thực SSH.] (#auth)
  <ul>
  <li>[1. Tiến trình yêu cầu chứng thực.] (#yeucau)</li>
