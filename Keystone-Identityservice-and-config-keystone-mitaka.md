@@ -297,6 +297,8 @@ Kiểm chứng lại các bước cài đặt `keysonte`
 	--os-project-domain-name default --os-user-domain-name default \
 	--os-project-name demo --os-username demo token issue
 	```
+	
+	https://github.com/congto/OpenStack-Mitaka-Scripts/blob/master/DOCS-OPS-Mitaka/Caidat-OpenStack-Mitaka.md
 
 
 ###Keystone Workflow.
