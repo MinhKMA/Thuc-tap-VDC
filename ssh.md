@@ -117,6 +117,7 @@ Tuy nhiên, SSH port forwarding chỉ hoạt động trên giao thức TCP và k
 - Random seed : Một dãy dữ liệu ngẫu nhiên đựoc dùng bởi các thành phần SSH để khởi chạy phần mềm sinh số ngẫu nhiên.
 - Configuration file : Một chồng thiết lập để biến đổi hành vi của một SSH client hoặc SSH server. Không phải tất cả thành phần đều được đòi hỏi trong một bản bổ sung của SSH. Dĩ nhiên những server, client và khoá là bắt buộc nhưng nhiều bản bổ sung không có agent và thậm chí vài bản không có bộ sinh khoá.
 <a name="auth"></a>
+
 ##IV. Gao thức chứng thực SSH (SSH_AUTH).
 <a name="yeucau"></a>
 ###1. Tiến trình yêu cầu chứng thực.
